@@ -4,6 +4,7 @@
 				<input class="word" v-model="value" placeholder="0" />
 			</div>
 				<div class="keyboard">
+<!--          TODO: Сделай переиспользуемый компонент кнопки, компоненты хранятся в папке components-->
 					<button class="action-button" @click="allClean">AC</button>
 					<button class="action-button" @click="squareRoot('√')">√</button>
 					<button class="action-button" @click="calcPercent">%</button>
@@ -34,6 +35,7 @@
 <script>
 
 export default{
+  // TODO: Убери неиспользуемый код (комментарии)
 
 	data(){
 		return{
@@ -48,13 +50,11 @@ export default{
 
 
 	methods:{
-		
+		// TODO: Пробелы не нужны после объявления методов (+ if else конструкции (else пишется на той же строке, где заканчивается if))
 		addNumber(event){
 			if(typeof(this.value) === 'number' ) {
 				this.value = '' + event.target.textContent.toString()
-			}
-
-			else{
+			} else{
 				this.value += event.target.textContent
 			}
 		},
@@ -75,7 +75,7 @@ export default{
 			// 	this.b += event.target.textContent
 			// 	this.value += this.b
 			// }
-
+    // TODO: Между методами 1 вместо 2
 		
 
 		allClean(){
@@ -86,6 +86,7 @@ export default{
 			this.value += oper
 		},
 
+    // TODO: функция eval не должна использоваться в коде
 		showResult(){
 			this.value = eval(this.value)
 		},
@@ -104,16 +105,19 @@ export default{
 	
 	},
 
-
+// TODO: Убери ненужные пробелы
 
 }
 </script>
 
+<!--TODO: Стили пишутся везде с атрибутом scoped-->
+/* TODO: Сделай для одной страницы названия классов в стиле БЭМ +
+добавь в тег style атрибут lang="scss", используя препроцессор, перепиши стили для калька
+*/
 <style>
 
-
 .action-button-equal{
-
+  /* TODO: Пробел не нужен */
 	grid-column-start: 3;
 	grid-column-end: 5;
 	color: black;
@@ -152,6 +156,7 @@ export default{
 	grid-gap: 1px;
 }
 
+/*TODO: стили прописываются по иерархии от большего к меньшему, html, body, #app, main, .classes, etc*/
 html{
 	width: 100%;
 	height: 100%;
