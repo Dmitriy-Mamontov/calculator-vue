@@ -115,7 +115,6 @@ export default{
 добавь в тег style атрибут lang="scss", используя препроцессор, перепиши стили для калька
 */
 <style lang="scss" scoped>
-
 .action-button-equal{
   /* TODO: Пробел не нужен */
 	grid-column-start: 3;
