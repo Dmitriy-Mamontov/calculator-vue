@@ -114,7 +114,7 @@ export default{
 /* TODO: Сделай для одной страницы названия классов в стиле БЭМ +
 добавь в тег style атрибут lang="scss", используя препроцессор, перепиши стили для калька
 */
-<style>
+<style lang="scss" scoped>
 
 .action-button-equal{
   /* TODO: Пробел не нужен */
