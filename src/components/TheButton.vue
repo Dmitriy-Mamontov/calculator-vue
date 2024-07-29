@@ -20,7 +20,7 @@
 					<button class="number-button" @click="addNumber">3</button>
 					<button class="action-button" @click="addOperator('+')">+</button>
 
-					<button class="number-button" @click="addNumber">0</button>
+					<button  class="number-button" @click="addNumber">0</button>
 					<button class="number-button" @click="addNumber">.</button>
 					<button class="action-button" @click="deleteLastSymbol">del.</button>
 					<button class="action-button" @click="showResult">=</button>
