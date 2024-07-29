@@ -18,7 +18,7 @@
 
 
 <script>
-import TheButton from '../components/TheButton.vue'
+import TheButton from './components/TheButton.vue'
 export default{
   // TODO: Убери неиспользуемый код (комментарии)#
 	components:{
