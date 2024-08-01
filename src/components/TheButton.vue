@@ -20,7 +20,7 @@
 					<button class="number-button" @click="addNumber">3</button>
 					<button class="action-button" @click="addOperator('+')">+</button>
 
-					<button  class="number-button" @click="addNumber">0</button>
+					<button class="number-button" @click="addNumber">0</button>
 					<button class="number-button" @click="addNumber">.</button>
 					<button class="action-button" @click="deleteLastSymbol">del.</button>
 					<button class="action-button" @click="showResult">=</button>
@@ -31,11 +31,7 @@
 export default {
 	data() {
 		return{
-			value: '',
-			shadowValue:'',
-			memory:[],
-			operators:['+','-', '*', '/'],
-			numbers:['1','2','3','4','5','6','7','8','9','0','.']
+
 		}
 	},
 
@@ -203,27 +199,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.keyboard{
-	width: 100%;
-	height:auto;
-	margin-top: 1px;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 1px;
-	grid-template-rows:repeat(5, 30px);
-	.action-button{
-		color: black;
-		padding: 0;
-		background: rgb(255, 190, 116);
-		cursor:pointer;
-		border-width: 1px;
-	}
-	.number-button{
-		color: black;
-		padding: 0;
-		background: rgb(172, 172, 172);
-		cursor:pointer;
-		border-width: 1px;
-	}
-}
+
 </style>
