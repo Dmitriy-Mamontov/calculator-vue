@@ -1,37 +1,39 @@
 <template>
-<BaseButton :look="'operator'" @click="allClean" value="AC"/>
-<base-button :look="'operator'" @click="squareRoot" value="√"/>
-<base-button :look="'operator'" @click="calcPercent" value="%"/>
-<base-button :look="'operator'" @click="addOperator" value="/"/>
+<BaseButton @click="transferInput" :look="'operator'" @clickButtton="allClean" value="AC"/>
+<BaseButton @click="transferInput" :look="'operator'" @clickButtton="squareRoot" value="√"/>
+<BaseButton @click="transferInput" :look="'operator'" @clickButtton="calcPercent" value="%"/>
+<BaseButton @click="transferInput" :look="'operator'" @clickButtton="addOperator" value="/"/>
 
-<base-button @click="addNumber" value="7"/>
-<base-button @click="addNumber" value="8"/>
-<base-button @click="addNumber" value="9"/>
-<base-button :look="'operator'" @click="addOperator" value="*"/>
+<BaseButton @click="transferInput" @clickButtton="addNumber" value="7"/>
+<BaseButton @click="transferInput" @clickButtton="addNumber" value="8"/>
+<BaseButton @click="transferInput" @clickButtton="addNumber" value="9"/>
+<BaseButton @click="transferInput" :look="'operator'" @clickButtton="addOperator" value="*"/>
 
-<base-button @click="addNumber" value="4"/>
-<base-button @click="addNumber" value="5"/>
-<base-button @click="addNumber" value="6"/>
-<base-button :look="'operator'" @click="addOperator" value="-"/>
+<BaseButton @click="transferInput" @clickButtton="addNumber" value="4"/>
+<BaseButton @click="transferInput" @clickButtton="addNumber" value="5"/>
+<BaseButton @click="transferInput" @clickButton="addNumber" value="6"/>
+<BaseButton @click="transferInput" :look="'operator'" @clickButton="addOperator" value="-"/>
 
-<base-button @click="addNumber" value="1"/>
-<base-button @click="addNumber" value="2"/>
-<base-button @click="addNumber" value="3"/>
-<base-button :look="'operator'" @click="addOperator" value="+"/>
+<BaseButton @click="transferInput" @clickButtton="addNumber" value="1"/>
+<BaseButton @click="transferInput" @clickButtton="addNumber" value="2"/>
+<BaseButton @click="transferInput" @clickButtton="addNumber" value="3"/>
+<BaseButton :look="'operator'" @click="transferInput" @clickButtton="addOperator" value="+"/>
 
-<base-button @click="addNumber" value="0"/>
-<base-button @click="addNumber" value="."/>
-<base-button :look="'operator'" @click="deleteLastSymbol" value="del."/>
-<base-button :look="'operator'" @click="showResult" value="="/>
+<BaseButton @click="transferInput" @clickButtton="addNumber" value="0"/>
+<BaseButton @click="transferInput" @clickButtton="addNumber" value="."/>
+<BaseButton :look="'operator'" @click="transferInput" @clickButtton="deleteLastSymbol" value="del."/>
+<BaseButton :look="'operator'" @click="transferInput" @clickButtton="showResult" value="="/>
 </template>
 
 <script> 
 import BaseButton from './BaseButton.vue'
 
 export default{
-components:{
-	BaseButton,
-},
+	name:'BaseButtons',
+	emits:['transferInput'],
+	components:{
+		BaseButton,
+	},
 	data(){
 		return{
 			inputValue:'',
@@ -43,6 +45,10 @@ components:{
 		}
 	},
 	methods:{
+
+		transferInput(){
+			this.$emit('transferInput', this.inputValue)
+		},
 
 		addNumber(data){
 			this.value += data

@@ -1,11 +1,15 @@
 <template>
-<input class="word"  placeholder="0" />
+<input
+ :value="modelValue"
+  @input="$emit('update:modelValue', $event.target.value)"
+	class="word"
+	placeholder="0"
+/>
 </template>
 <script>
 export default {
-	data() {
-		return{
-		}
-	},
+	name: 'BaseInput',
+	props: ['modelValue'],
+	emits: ['update:modelValue'],
 }
 </script>

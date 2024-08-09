@@ -1,10 +1,10 @@
 <template>
 	<base-wrapper>
 			<template #input >
-				<base-input></base-input>
+				<base-input v-model="input"></base-input>
 			</template>
 			<template #keyboard>
-				<base-buttons></base-buttons>
+				<base-buttons @transferInput="changeInput"></base-buttons>
 			</template>
 	</base-wrapper>
 </template>
@@ -27,6 +27,11 @@ export default{
 		return{
 			input:''
 		}
+	},
+	methods:{
+		changeInput(data){
+			this.input = data
+		},
 	},
 }
 </script>
