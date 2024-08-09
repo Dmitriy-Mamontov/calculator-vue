@@ -1,28 +1,28 @@
 <template>
-<BaseButton @click="transferInput" :look="'operator'" @clickButtton="allClean" value="AC"/>
-<BaseButton @click="transferInput" :look="'operator'" @clickButtton="squareRoot" value="√"/>
-<BaseButton @click="transferInput" :look="'operator'" @clickButtton="calcPercent" value="%"/>
-<BaseButton @click="transferInput" :look="'operator'" @clickButtton="addOperator" value="/"/>
+<BaseButton @click="transferInput" @clickButton="allClean" :look="'operator'"  value="AC"/>
+<BaseButton @click="transferInput" @clickButton="squareRoot" :look="'operator'"  value="√"/>
+<BaseButton @click="transferInput" @clickButton="calcPercent" :look="'operator'"  value="%"/>
+<BaseButton @click="transferInput" @clickButton="addOperator" :look="'operator'"  value="/"/>
 
-<BaseButton @click="transferInput" @clickButtton="addNumber" value="7"/>
-<BaseButton @click="transferInput" @clickButtton="addNumber" value="8"/>
-<BaseButton @click="transferInput" @clickButtton="addNumber" value="9"/>
-<BaseButton @click="transferInput" :look="'operator'" @clickButtton="addOperator" value="*"/>
+<BaseButton @click="transferInput" @clickButton="addNumber" value="7"/>
+<BaseButton @click="transferInput" @clickButton="addNumber" value="8"/>
+<BaseButton @click="transferInput" @clickButton="addNumber" value="9"/>
+<BaseButton @click="transferInput" @clickButton="addOperator" :look="'operator'" value="*"/>
 
-<BaseButton @click="transferInput" @clickButtton="addNumber" value="4"/>
-<BaseButton @click="transferInput" @clickButtton="addNumber" value="5"/>
+<BaseButton @click="transferInput" @clickButton="addNumber" value="4"/>
+<BaseButton @click="transferInput" @clickButton="addNumber" value="5"/>
 <BaseButton @click="transferInput" @clickButton="addNumber" value="6"/>
-<BaseButton @click="transferInput" :look="'operator'" @clickButton="addOperator" value="-"/>
+<BaseButton @click="transferInput" @clickButton="addOperator" :look="'operator'" value="-"/>
 
-<BaseButton @click="transferInput" @clickButtton="addNumber" value="1"/>
-<BaseButton @click="transferInput" @clickButtton="addNumber" value="2"/>
-<BaseButton @click="transferInput" @clickButtton="addNumber" value="3"/>
-<BaseButton :look="'operator'" @click="transferInput" @clickButtton="addOperator" value="+"/>
+<BaseButton @click="transferInput" @clickButton="addNumber" value="1"/>
+<BaseButton @click="transferInput" @clickButton="addNumber" value="2"/>
+<BaseButton @click="transferInput" @clickButton="addNumber" value="3"/>
+<BaseButton @click="transferInput" @clickButton="addOperator" :look="'operator'" value="+"/>
 
-<BaseButton @click="transferInput" @clickButtton="addNumber" value="0"/>
-<BaseButton @click="transferInput" @clickButtton="addNumber" value="."/>
-<BaseButton :look="'operator'" @click="transferInput" @clickButtton="deleteLastSymbol" value="del."/>
-<BaseButton :look="'operator'" @click="transferInput" @clickButtton="showResult" value="="/>
+<BaseButton @click="transferInput" @clickButton="addNumber" value="0"/>
+<BaseButton @click="transferInput" @clickButton="addNumber" value="."/>
+<BaseButton @click="transferInput" @clickButton="deleteLastSymbol" :look="'operator'"  value="del."/>
+<BaseButton @click="transferInput" @clickButton="showResult" :look="'operator'"  value="="/>
 </template>
 
 <script> 

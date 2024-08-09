@@ -4,7 +4,7 @@
 		'number-button': look === 'number', 
 		'action-button': look === 'operator'
 	}"
-	@click="$emit('clickButtton', value)"
+	@click="$emit('clickButton', value)"
 	>
 	{{ value }}
 	</button>
@@ -13,7 +13,7 @@
 <script>
 export default {
 	name: 'BaseButton',
-	emits:['clickButtton'],
+	emits:['clickButton'],
 	props:{
 		look:{
 			type:String,

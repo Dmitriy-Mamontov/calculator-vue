@@ -1,7 +1,7 @@
 <template>
 	<BaseWrapper>
 			<template #input >
-				<BaseInputnput v-model="input"/>
+				<BaseInput v-model="input"/>
 			</template>
 			<template #keyboard>
 				<BaseButtons @transferInput="changeInput"/> 
@@ -24,7 +24,7 @@ export default{
 
 	data(){
 		return{
-			result: null,
+			input:'',
 		}
 	},
 	methods:{
