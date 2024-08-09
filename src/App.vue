@@ -1,14 +1,13 @@
 <template>
-	<base-wrapper>
-			<template #input >
-				<base-input></base-input>
+	<BaseWrapper>
+			<template #input>
+        <BaseInput />
 			</template>
 			<template #keyboard>
-				<base-buttons></base-buttons>
+        <BaseButtons />
 			</template>
-	</base-wrapper>
+	</BaseWrapper>
 </template>
-<!--          TODO: Сделай переиспользуемый компонент кнопки, компоненты хранятся в папке components #--> 
 
 <script>
 
@@ -25,7 +24,7 @@ export default{
 
 	data(){
 		return{
-			input:''
+			result: null,
 		}
 	},
 }
