@@ -1,7 +1,7 @@
 <template>
 	<BaseWrapper>
 			<template #input >
-				<BaseInput v-model="input"/>
+				<BaseInput :value="input"/>
 			</template>
 			<template #keyboard>
 				<BaseButtons @transferInput="changeInput"/> 
