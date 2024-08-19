@@ -2,12 +2,11 @@
   "name": "my-calculator",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-		"serve": "vue-cli-service serve",
-    "dev": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
-    "eslint": "eslint"
-	},
+	"scripts": {
+  "dev": "vue-cli-service serve",
+  "build": "vue-cli-service build",
+  "eslint": "eslint"
+},
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13"

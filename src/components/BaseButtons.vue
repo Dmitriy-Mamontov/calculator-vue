@@ -54,6 +54,14 @@ export default{
 			this.value += data
 			this.shadowValue += data
 			this.inputValue += Object.values(data)
+
+			if (this.memory[0] === '-'){
+				this.memory = []
+				this.shadowValue = this.inputValue
+				this.memory.push(this.shadowValue )
+			}
+			console.log(this.shadowValue)
+			console.log(this.memory)
 		},
 
 		allClean(){
@@ -94,6 +102,9 @@ export default{
 			this.memory.push(data)
 			this.shadowValue = ''
 			this.inputValue += Object.values(data)
+
+			console.log(this.shadowValue)
+			console.log(this.memory)
 		},
 
 		showResult(){
@@ -129,6 +140,9 @@ export default{
 					this.inputValue = res
 				}
 			}
+
+			console.log(this.shadowValue)
+			console.log(this.memory)
 		},
 
 		squareRoot(){
@@ -192,6 +206,9 @@ export default{
 					this.inputValue = this.value
 				}
 			}
+
+			console.log(this.shadowValue)
+			console.log(this.memory)
 		}
 	},
 }
